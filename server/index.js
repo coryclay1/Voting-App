@@ -5,6 +5,8 @@ const path = require("path");
 const app = express();
 const dataFile = path.join(__dirname, "data.json");
 
+app.use(express.static(path.join(__dirname, "..", "client")));
+
 //helps visitors to POST vote option using URL encoded
 app.use(express.urlencoded({ extended: true }));
 
